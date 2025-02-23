@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
+    background-color: hsl(0, 11%, 98%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Rubik", serif;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    width: 33%;
+    height: 85vh;
+    top: 0;
+    left: -90px;
+    z-index: -1;
+    border-bottom-right-radius: 300px 300px;
+    border-bottom-left-radius: 300px 300px;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(231, 227, 233, 0.4);
+    width: 33%;
+    height: 85vh;
+    bottom: -20px;
+    right: -100px;
+    z-index: -1;
+    border-top-right-radius: 300px 300px;
+    border-top-left-radius: 300px 300px;
+}
+
+.container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*start mobile*/
+.container .mobile {
+    width: 40%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #eee;
+}
+
+.container .mobile .screen {
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 25px;
+}
+
+/*start mobile head*/
+.mobile .head {
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 50px 30px 20px;
+    position: relative;
+}
+
+.mobile .head .top-white {
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    width: 60%;
+    height: 30px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile .head .content {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    position: relative;
+}
+
+.mobile .head .content::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f053";
+    font-weight: 900;
+    font-size: 18px;
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    left: -30px;
+}
+
+.mobile .head .content::after {
+    font-family: var(--fa-style-family-classic);
+    content: "\f142";
+    font-weight: 900;
+    font-size: 18px;
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    right: 0;
+}
+
+.mobile .head .head-image {
+    margin-right: 15px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 1px solid hsl(0, 0%, 100%);
+}
+
+.mobile .head .head-image img {
+    width: 100%;
+}
+
+.mobile .head .head-info .name {
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+.mobile .head .head-info .status {
+    color: hsl(276, 100%, 81%);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/*start mobile body*/
+.mobile .body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile .body .message {
+    max-width: 68%;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.mobile .body .message.left.chat {
+    background-color: hsl(276, 38%, 92%);
+    padding: 10px;
+    color: hsl(276, 55%, 52%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 15px;
+}
+
+.mobile .body .message.right.chat {
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+    color: hsl(271, 15%, 43%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 8px;
+    align-self: self-end;
+}
+
+.mobile .body .message.right.images {
+    margin-top: 10px;
+    max-width: 80%;
+    align-self: self-end;
+    display: flex;
+}
+
+.mobile .body .message.right.images img {
+    max-width: 70px;
+    max-height: 70px;
+    margin-left: 10px;
+    border-radius: 15px;
+}
+
+.mobile .body .message.left.price {
+    position: relative;
+    padding: 10px 30px 10px 40px;
+    max-width: 80%;
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-top-left-radius: 25px;
+    color: rgba(255, 255, 255, 0.5);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 15px;
+    font-size: 13;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile .body .message.left.price::before {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mobile .body .message.left.price span {
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.mobile .body .send-box {
+    position: relative;
+}
+
+.mobile .body .send-box .text {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 50px;
+    caret-color: hsl(206, 6%, 79%);
+}
+
+.mobile .body .send-box .text:focus {
+    outline: none;
+}
+
+.mobile .body .send-box .text::placeholder {
+    color: hsl(206, 6%, 79%);
+}
+
+.mobile .body .send-box .submit {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    background-color: hsl(271, 36%, 24%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*start info*/
+.container .info {
+    width: 50%;
+}
+
+.container .info h1 {
+    font-weight: 500;
+    font-size: 40px;
+    color: hsl(271, 36%, 24%);
+}
+
+.container .info p {
+    font-weight: 400;
+    line-height: 1.8;
+    color: hsl(270, 7%, 64%);
+}
+
+@media (max-width:900px) {
+
+    body::before,
+    body::after {
+        width: 45%;
+    }
+
+    body::before {
+        left: -20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container .mobile {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .container .info {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:600px) {
+
+    .container .mobile {
+        width: 100%;
+    }
+
+    .container .info {
+        width: 100%;
+    }
+
+    .container .info p {
+        font-size: 18px;
+    }
+}

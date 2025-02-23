@@ -11,8 +11,8 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    overflow: hidden;
     font-family: "Rubik", serif;
+    overflow: hidden;
 }
 
 body::before {
